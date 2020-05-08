@@ -134,8 +134,8 @@ depends_on = [aws_instance.instance1]
 
   provisioner "local-exec" {
 
-    working_dir = "./ansible_code"
-    command = "ansible-playbook -vD newplaybook.yml"
+    #working_dir = "."
+    command = "ansible-playbook -vD /home/ec2-user/demo/ansible-terraform-akila/newplaybook.yaml"
   }
 }
 

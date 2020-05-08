@@ -3,7 +3,7 @@
 
 variable "private_key_path"{
   type = string
-  default = "C:\\TerraformDemo\\terraform.pem"
+  default = "terraform.pem"
 }  
 
 variable "ssh_user"{

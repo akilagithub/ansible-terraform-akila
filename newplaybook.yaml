@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: Install git
+      yum:
+        name: git
+        state: latest
+    - name: Create a user 
+      user: 
+        name: user1 
+        group: users
+        shell: /bin/bash
+        home: /home/user1 
+    - name: create a directory
+      file:
+        path: /tmp
+        state: present
+        mode: 0755
